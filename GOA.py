@@ -16,8 +16,8 @@ def population_docs_intial(population):
         pop.append(data[str(i)])
     return pop
 
-class GSA(optimizer.Optimizer):
-    #Create an object that optimizes a given fitness function with GSA.
+class GOA(optimizer.Optimizer):
+    #Create an object that optimizes a given fitness function with GOA.
     def __init__(self, fitness_function, solution_size, lower_bounds, upper_bounds, population_size=2, max_iterations=1, G_initial=1.0, G_reduction_rate=0.5, **kwargs):
 
         optimizer.Optimizer.__init__(self, fitness_function, population_size,max_iterations, **kwargs)
@@ -27,13 +27,13 @@ class GSA(optimizer.Optimizer):
         self.lower_bounds = lower_bounds
         self.upper_bounds = upper_bounds
 
-        # GSA variables
+        # GOA variables
         self.G_initial = G_initial
         self.G_reduction_rate = G_reduction_rate
         self.velocities = [[0.0]*self.solution_size]*self.population_size
 
     def initialize(self):
-        # Intialize GSA variables
+        # Intialize GOA variables
         self.velocities = [[0.0]*self.solution_size]*self.population_size
 
     def create_initial_population(self, population_size):
