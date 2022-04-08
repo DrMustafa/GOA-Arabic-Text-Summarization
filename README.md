@@ -1,2 +1,2 @@
 # GSA-Arabic-Text-Summarization
-Arabic Text Summarization Using Gravitational Search Algorithm
+A novel gravity ‎optimization approach for extractive ‎Arabic text summarization
